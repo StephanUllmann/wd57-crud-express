@@ -4,7 +4,7 @@ import { createUser, getUsers, getSingleUser, updateUser, deleteUser } from '../
 const userRouter = Router();
 //  User CRUD
 // Create User
-userRouter.post('/users', createUser);
+userRouter.post('/', createUser);
 
 // Get all users
 userRouter.get('/', getUsers);

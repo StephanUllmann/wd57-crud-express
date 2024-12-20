@@ -16,7 +16,7 @@ const createUser = async (req, res) => {
 const getUsers = async (req, res) => {
   try {
     const users = await User.findAll();
-    if (!users) return res.status(404).json({ msg: 'No users yet.' });
+    if (!users.length) return res.status(404).json({ msg: 'No users yet.' });
     res.json({ data: users });
   } catch (error) {
     console.error(error);
